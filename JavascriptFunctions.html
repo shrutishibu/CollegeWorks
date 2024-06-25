@@ -1,0 +1,39 @@
+<!DOCTYPE HTML5>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale=1">
+        <title>JavaScript Functions</title>
+        <script>
+            //Function inside head
+            function addition(x, y){
+                return x+y;
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            (function(){
+                document.body.innerHTML += "This is a self invoking function. Other functions are shown below: ";
+            })();
+            function toCelcius(farenheit){
+                let celcius = 0;
+                document.body.innerHTML += "<br>Datatype of celcius inside function: " + typeof(celcius);
+                celcius = (5/9)*(farenheit-32);
+                return celcius;
+            }
+            document.body.innerHTML += "<br>Datatype of celcius outside function: " + typeof(celcius);
+            let farenheit = 77;
+            returnedcelcius = toCelcius(farenheit);
+            //returning to a variable
+            document.body.innerHTML += "<br>" + farenheit + " farenheit in celcius = " + returnedcelcius;
+            //not returning to a variable
+            document.body.innerHTML += "<br>Sum of farenheit and celcius is " + addition(farenheit, returnedcelcius);
+            //anonymous functions
+            const sub = function(x, y){
+                return x-y;
+            }
+            document.body.innerHTML += "<br>Difference of farenheit and celcius is " + sub(farenheit, returnedcelcius);
+        </script>
+    </body>
+</html>

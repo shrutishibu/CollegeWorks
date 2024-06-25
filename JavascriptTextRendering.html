@@ -1,0 +1,25 @@
+<!DOCTYPE HTML5>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Texts</title>
+    </head>
+    <body>
+        <div id="element1"><h1>Hello <b>World</b> 1</h1></div>
+        <div id="element2"><h1>Hello <b>World</b> 2</h1></div>
+        <div id="element3"><h1>Hello <b>World</b> 3</h1></div>
+        <script>
+            let element1 = document.getElementById('element1');
+            let element2 = document.getElementById('element2');
+            let element3 = document.getElementById('element3');
+            console.log(element1.innerText);
+            console.log(element2.innerHTML);
+            console.log(element3.textContent);
+            document.body.innerHTML += "<br>" + element1.innertext + "<br>" + element2.innerHTML +  "<br>" + element3.textContent;
+            element1.innerText = 'New <b>text</b> 1';
+            element2.innerHTML = 'New <b>text</b> 2';
+            element3.textContent = 'New <b>text</b> 3';
+        </script>
+    </body>
+</html>

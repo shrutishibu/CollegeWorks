@@ -1,0 +1,23 @@
+<!DOCTYPE HTML5>
+<html>
+    <head>
+        <meta charset = "utf-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1">
+    <title>Variables and comments</title>
+    </head>
+    <body>
+        <script>
+            let x=5; //number
+            let y=10; //number
+            let z=""; //string with value null
+            let a; //undefined
+            document.body.innerHTML = typeof(x) + " " + typeof(y) + " " + typeof(z) + " " + typeof(a);
+            z = x+y;
+            document.body.innerHTML += " " + typeof(z);
+            /*
+                The above is used for displaying datatypes. JavaScript uses dynamic variable datatypes.
+            */
+            document.body.innerHTML += "<br>Sum of " + x + " " + "and " + y +  " " + "is " + z;
+        </script>
+    </body>
+</html>

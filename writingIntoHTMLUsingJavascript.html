@@ -1,0 +1,20 @@
+<!DOCTYPE HTML5>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Writing into HTML</title>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <p id="innerhtml"></p>
+        <script>
+            document.writeln("This text is written using writeln");
+            document.getElementById("innerhtml").innerHTML = "This text is written using innerHTML";
+            document.write("This text is written using write");
+            document.writeln("<h1>Heading using writeln</h1>");
+            document.write("<h1 style='color:green;'>Customized heading using write</h1>");
+            document.body.innerHTML += "<p>New para using innerHTML";
+        </script>
+    </body>
+</html>
